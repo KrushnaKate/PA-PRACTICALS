@@ -1,0 +1,16 @@
+//multiplication
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <p18cxxx.h>
+#include <xc.h>
+
+void main(void) {
+    int sum;
+    sum = 0;
+    sum = 0x03 * 0X02;
+    
+    TRISC = 0;
+    PORTC = sum;
+}

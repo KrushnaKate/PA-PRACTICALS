@@ -1,0 +1,33 @@
+//#include<pic18f4550.h> 
+//for mplab x idee 6.15
+
+#include <xc.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <p18f4550.h
+
+void main(void) {
+    
+    int result1, result2, result3, result4;
+    
+    result1 = 0x02 + 0X03;
+    
+    result2 = 0x02 * 0x02;
+    
+    result3 = 0x02 / 0x02;
+    
+    result4 = 0x05 - 0x02;
+    
+    TRISB = 0;
+    TRISC = 0; 
+    TRISA = 0;
+    TRISD = 0;
+    
+    PORTB = result1;
+    PORTC = result2;    
+    PORTA = result3;
+    PORTD = result4;
+    
+    
+    return;
+}

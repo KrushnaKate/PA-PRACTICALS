@@ -1,0 +1,17 @@
+
+#include <xc.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<p18f4550.h>
+//#include<pic18f4550.h>
+void main(void) {
+    int i ,sum,n=3;
+    int number[]={1,2,3,4};
+    sum=1;
+    for (i=0;i<=n;i++)
+    {
+        sum=sum*number[i];
+    }
+    TRISD=0;
+    PORTD=sum;
+}

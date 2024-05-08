@@ -1,0 +1,20 @@
+//#include<pic18f4550.h> 
+//for mplab x idee 6.15
+
+
+#include <xc.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <pic18f4550.h>
+
+void main(void) {
+    int d = 1;
+    int i;
+    
+    for(i=1;i<=3;i++){
+        d = d * i;
+    }
+    
+    TRISD = 0;
+    PORTD = d;
+}

@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<pic18f4550.h>
+void main(void){
+    int n=10,f=0,s=1,next,i;
+    int num[10];
+    for(int i=0;i<n;i++)
+    {
+        if(i<=1){
+            next=i;
+        }
+        else{
+            next=f+s;
+            f=s;
+            s=next;
+        }
+        num[i]=next;
+    }
+    TRISA=0;
+    TRISB=0;
+    TRISC=0;
+    TRISD=0;
+    TRISE=0;
+    PORTE=num[5];
+    PORTC=num[6];
+    PORTB=num[7];
+    PORTD=num[8];
+    PORTA=num[9];
+}

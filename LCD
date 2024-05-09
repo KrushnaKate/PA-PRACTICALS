@@ -34,7 +34,7 @@ TRISE=0X00;
 init_LCD();
 msdelay(50);
 
-LCD_command(0x0C0);
+LCD_command(0x0C0); //set cursor position to begining
 LCD_write_string(var1);
 LCD_write_string(var2);
 
@@ -48,13 +48,13 @@ for(i=0;i<time;i++);
 }
 void init_LCD(void)
 {
-LCD_command(0x38);
+LCD_command(0x38); //initialize
 msdelay(15);
-LCD_command(0x01);
+LCD_command(0x01); //clear lcd display
 msdelay(15);
-LCD_command(0x0C);
+LCD_command(0x0C); //turn on display
 msdelay(15);
-LCD_command(0x80);
+LCD_command(0x80); //begin working
 msdelay(15);
 }
 void LCD_command (unsigned char cmd)
@@ -73,9 +73,9 @@ void LCD_data (unsigned char data)
 {
 LCD_DATA=data;
 
-rs=1;
-rw=0;
-en=1;
+rs=1; //data being sent t lcd
+rw=0; //data being written to lcd
+en=1; //lcd communicate with micro
  
 msdelay(15);
 en=0;
